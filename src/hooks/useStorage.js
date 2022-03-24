@@ -19,7 +19,11 @@ const useStorage = (file) => {
         }, async () => {
             const url = await storageRef.getDownloadURL();
             const createdAt = timestamp();
-            collectionRef.add({ url, createdAt })
+            let askDescription = prompt("Add a description to the image");
+            const description = askDescription;
+            let askTitle = prompt("Add a Title to the image");
+            const title = askTitle
+            collectionRef.add({ url, createdAt, description, title })
             setUrl(url);
         })
     }, [file]);

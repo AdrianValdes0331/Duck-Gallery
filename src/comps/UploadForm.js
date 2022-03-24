@@ -12,6 +12,7 @@ const UploadForm = () => {
 
         if(selected && types.includes(selected.type)){
             setFile(selected);
+            console.log("se subio algo?")
             setError('');
         }else{
             setFile(null);
