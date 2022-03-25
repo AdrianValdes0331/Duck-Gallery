@@ -16,6 +16,7 @@ function App(){
       maxRows: 10,
     }
   );
+  document.body.style.overflow = "visible";
 
   return(
     <div className="App">

@@ -16,11 +16,15 @@ body{
   max-width: 960px;
   margin: 0 auto;
 }
+.title{
+  margin-top: 3%;
+}
 .title h1{
   color: var(--primary);
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: normal;
+  text-align: center;
 }
 .title h2, .title p{
   text-align: center;
@@ -29,6 +33,15 @@ body{
   margin-top: 60px;
   font-size: 2.6rem;
 }
+a{
+  color: #4e4e4e;
+  transition: all .2s ease-in;
+}
+a:hover{
+  color: #efb6b2;
+  text-decoration: none;
+  transition: all .2s ease-out;
+}
 
 /* upload form styles */
 form{
@@ -36,11 +49,13 @@ form{
   text-align: center;
 }
 label input{
+  cursor: pointer;
   height: 0;
   width: 0;
   opacity: 0;
 }
 label.open{
+  cursor: pointer;
   display: block;
   width: 30px;
   height: 30px;
@@ -50,11 +65,13 @@ label.open{
   line-height: 30px;
   color: var(--primary);
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px;
+  transition: all .3s ease-in;
 }
 label:hover{
   background: var(--primary);
   color: white;
+  transition: all .3s ease-in;
 }
 
 label.upload{
@@ -65,6 +82,7 @@ label.upload{
   color: var(--secondary);
   position: absolute;
   top: 8px;
+  cursor: pointer;
 }
 
 label.upload:focus,.upload:active{
@@ -76,14 +94,30 @@ label.upload:hover{
 }
 
 button.submit{
+  color: #4e4e4e;
+  background-color: #efb6b2;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 15px;
   position: absolute;
   bottom: 0;
   display: block;
+  transition: all .3s ease-out;
+}
+button.submit:hover{
+  color:#efb6b2;
+  background-color: #4e4e4e;
+  transition: all .3s ease-in;
 }
 
 .output{
-  padding-bottom: 30px;
+  text-decoration: underline;
+  font-weight: bold;
+  position:fixed;
+  text-align: center;
+  bottom: auto;
   font-size: 0.8rem;
+  right: auto;
 }
 .error{
   color: var(--error);
@@ -118,6 +152,20 @@ button.submit{
   position: absolute;
   top: 0;
   left: 0;
+  transition: all .3s ease-out;
+}
+.img-wrap img:hover{
+  transform: scale(1.02);
+  transition: all .3s ease-in;
+}
+.bckGround .col-6, .bckGround .col-5{
+  display: flex;
+  height: 590px;
+}
+.bckGround .description{
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 /* modal styles */
@@ -139,25 +187,41 @@ button.submit{
   z-index: 1;
 }
 .backdrop img{
-  display: block;
+  display: inline-block;
   max-width: 75%;
   max-height: 80%;
-  margin: 60px auto;
+  margin: auto;
   box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
 }
 .bckGround{
   background-color: white;
-  width: 80%;
+  width: 1000px !important;
+  height: 600px !important;
   margin: auto;
-  margin-top: 2%;
+  margin-top: 4%;
 }
 .bckGroundU{
   background-color: white;
-  width: 40%;
+  width: 70%;
+  height: 400px;
   margin: auto;
-  margin-top: 2%;
+  margin-top: 10%;
   padding-bottom: 15px;
+  padding-top: 15px;
 }
+.bckGroundU .col-5, .bckGroundU .col-6{
+  height: 360px;
+  display: flex;
+}
+.bckGroundU .description{
+  display: inline-block;
+  margin-top: 15%;
+}
+.bckGroundU img{
+  margin: auto;
+  max-height: 200px;
+}
+
 .modalB{
   font-size: 50px !important;
   margin: 0 10px 0 0;
@@ -219,6 +283,4 @@ input {
 
 img{
   max-width: 100%;
-  padding-top: 50px;
-  padding-bottom: 5px;
 }
