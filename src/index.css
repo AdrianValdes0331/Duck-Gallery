@@ -17,7 +17,7 @@ body{
   margin: 0 auto;
 }
 .title{
-  margin-top: 3%;
+  margin-top: 12%;
 }
 .title h1{
   color: var(--primary);
@@ -41,6 +41,61 @@ a:hover{
   color: #efb6b2;
   text-decoration: none;
   transition: all .2s ease-out;
+}
+
+/* Footer */
+footer{
+  text-align: center;
+  color: #4e4e4e;
+  background-color: #efb6b2;
+  margin-top: 5%;
+  padding-top: 20px;
+  padding-bottom: 1px;
+  transition: all .3s ease-out;
+}
+footer:hover{
+  transition: all .3s ease-in;
+  color:#efb6b2;
+  background-color: #4e4e4e;
+}
+
+/* NavBar style */
+nav {
+  top: 0;
+  background-color: #4e4e4e;
+  position: fixed !important;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+nav button{
+  border-color: #efb6b2 !important;
+  color: #efb6b2 !important;
+  transition: all .3s ease-in;
+  right: 50px;
+  position:fixed !important;
+  top: 20px;
+}
+nav button:hover{
+  color:#4e4e4e !important;
+  background-color: #efb6b2 !important;
+  transition: all .3s ease-out;
+}
+nav h1 a{
+  color: #efb6b2 !important;
+}
+nav h1:hover{
+  transition: all .3s ease-in;
+  transform: scale(1.02);
+}
+nav h1{
+  transition: all .3s ease-out;
+}
+nav img{
+  width: 4%;
+  filter: invert(98%) sepia(49%) saturate(1469%) hue-rotate(292deg) brightness(94%) contrast(100%);
+  margin: 0 2%;
+  margin-left: 4%;
 }
 
 /* upload form styles */
