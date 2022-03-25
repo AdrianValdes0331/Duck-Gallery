@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import ProgressBar from './ProgressBar';
 
 const ModalUpload = ({upload, textArea, setTextArea}) => {
+  document.body.style.overflow = "hidden";
+
     const [file, setFile] = useState(null);
     const [error, setError] = useState(null);
     const types = ['image/png', 'image/jpeg'];
@@ -26,13 +28,11 @@ const ModalUpload = ({upload, textArea, setTextArea}) => {
     const handleClick = (e) => {
       if (e.target.classList.contains('backdropU')) {
         upload(false);
-        document.body.style.overflow = "visible";
       }
     }
 
     const exit = (e) => {
         upload(false);
-        document.body.style.overflow = "visible";
     }
 
     const submitButton = (e) =>{
@@ -61,6 +61,7 @@ const ModalUpload = ({upload, textArea, setTextArea}) => {
             value: e.target.value,
             rows: currentRows < maxRows ? currentRows : maxRows,
         });
+      
     };
 
     const changeTitle = (e) => {
